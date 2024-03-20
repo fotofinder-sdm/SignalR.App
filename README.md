@@ -18,4 +18,4 @@ Certainly! Here are a few bullet points about SignalR App Component:
 
 **Real-world Applications:** SignalR is commonly used in applications that require real-time updates, such as chat applications, collaborative editing tools, live dashboards, multiplayer games, and more. It enables developers to build interactive and engaging experiences for users.
 
-These bullet points provide a high-level overview of SignalR and its components, highlighting its capabilities and common use cases in real-world applications.
+These points provide a high-level overview of SignalR and its components, highlighting its capabilities and common use cases in real-world applications.
