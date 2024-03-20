@@ -1,1 +1,1 @@
-# SignalR.App
+# SignalR App Component
