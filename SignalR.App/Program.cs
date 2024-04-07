@@ -6,13 +6,13 @@ namespace SignalR.App
     {
         public static void Main(string[] args)
         {
+            Program program = new();
+
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddControllersWithViews();
-
             builder.Services.AddSignalR();
 
             var app = builder.Build();
-
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
@@ -23,11 +23,18 @@ namespace SignalR.App
             app.UseHttpsRedirection();
             app.UseAuthorization();
 
+            //app.UseEndpoints(endpoint =>
+            //{
+            //    endpoint.MapHub<ChatHub>("/chat-hub");
+            //});
+
+            app.MapHub<ChatHub>("/chat-hub");
+
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
-            app.MapHub<ChatHub>("chat-hub");
+           
             app.Run();
         }
     }
